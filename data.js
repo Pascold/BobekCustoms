@@ -1,5 +1,3 @@
-// Cennik modeli. Dodaj po jednym aucie w formacie: Model|Cena salonowa
-// Ceny i pozostałe pola są wyliczane automatycznie według formuł użytkownika.
 const raw = `
 10F|21000000
 Adder|17500000

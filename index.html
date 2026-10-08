@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#00DAFF">
+  <title>Bobek Customs</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="topline"><a class="brand" href="#" aria-label="Bobek Customs"><img src="logo.svg" alt="Bobek Customs" onerror="this.onerror=null;this.src='logo.png'"><span>BOBEK CUSTOMS</span></a><div class="status"><i></i>KALKULATOR TUNINGU</div></header>
+    <nav class="tabs" aria-label="Główne zakładki"><button class="tab active" id="tab-tune">FULL TUNE</button><button class="tab" id="tab-visual">WIZUALKA</button></nav>
+    <main>
+      <section id="tune-view">
+        <div class="hero"><div><div class="eyebrow">Wybierz pojazd</div><h1>FULL TUNE</h1><p>Znajdź model, wybierz fulltune albo skomponuj tuning z pojedynczych części.</p></div><div class="load-status" id="load-status"></div></div>
+        <div class="searchbar"><span>⌕</span><input id="q" type="search" placeholder="Wpisz model auta…" autocomplete="off" aria-label="Szukaj modelu auta"></div>
+        <p class="searchhint">Ceny pokazane przy modelu: <b>salonowa</b> i <b>full tuning</b>.</p>
+        <div id="grid" class="cars"></div>
+      </section>
+      <section id="visual-view" class="hidden">
+        <div class="hero"><div><div class="eyebrow">Kalkulator usług</div><h1>WIZUALKA</h1><p>Wybierz usługi, ustaw ich liczbę i sprawdź podsumowanie.</p></div></div>
+        <div class="visual-toolbar"><label class="visual-search"><span>⌕</span><input id="visual-search" type="search" autocomplete="off" placeholder="Szukaj usługi, np. lakier…" aria-label="Szukaj usługi"></label></div>
+        <p class="category-prompt">Wybierz kategorię albo przeglądaj wszystkie usługi:</p>
+        <nav class="service-tabs" id="service-tabs" aria-label="Kategorie usług"></nav>
+        <section class="calculator-layout">
+          <div class="service-catalog" id="service-catalog"></div>
+          <aside class="calc-summary"><h2>Twoje podsumowanie</h2><div class="selected-services" id="selected-services"><div class="calc-empty">Nic nie wybrano jeszcze.</div></div><button class="calc-primary" id="copy-summary">Kopiuj podsumowanie</button><button class="calc-secondary" id="clear-services">Wyczyść wszystkie</button><div class="discount-options" id="discount-options"></div><div class="calc-total"><small>Kwota całkowita</small><div class="calc-total-prices"><s id="calc-old-total" hidden></s><strong id="calc-total">0 $</strong></div></div></aside>
+        </section>
+      </section>
+    </main>
+    <footer class="foot"><span>BOBEK CUSTOMS · CENNIK </span><span>Wybierz model, by zobaczyć ceny i części.</span></footer>
+  </div>
+  <div id="calc-toast" class="calc-toast" role="status" aria-live="polite"></div>
+  <div id="modal-root"></div>
+  <script src="data.js"></script><script src="app.js"></script><script src="visual-calculator.js?v=4"></script>
+</body>
+</html>
